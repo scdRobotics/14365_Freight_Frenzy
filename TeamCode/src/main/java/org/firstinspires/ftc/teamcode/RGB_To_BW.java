@@ -10,6 +10,8 @@ import org.openftc.easyopencv.OpenCvCameraFactory;
 import org.openftc.easyopencv.OpenCvCameraRotation;
 import org.openftc.easyopencv.OpenCvPipeline;
 
+// TODO: Test for OpenCV, may not pursue further, we'll see what Tensorflow can accomplish
+
 @Autonomous(name="RGB To BW", group="linearOpMode")
 public class RGB_To_BW extends AutonomousPrime2020 {
     Mat grey = new Mat();

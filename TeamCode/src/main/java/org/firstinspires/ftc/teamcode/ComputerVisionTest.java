@@ -8,6 +8,8 @@ import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import java.util.List;
 
+// TODO: Get working with custom .TFLITE models (LONG TERM)
+
 @Autonomous(name="ComputerVisionTest", group="linearOpMode")
 public class ComputerVisionTest extends AutonomousPrime2020 {
     private static final String TFOD_MODEL_ASSET = "UltimateGoal.tflite";

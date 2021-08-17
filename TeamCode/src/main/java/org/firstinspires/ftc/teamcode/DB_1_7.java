@@ -13,7 +13,7 @@
 
 package org.firstinspires.ftc.teamcode;
 
-// TODO: Add distance sensor aided/automatic high goal targeting; we may need distance sensors on all sides for this to work
+// TODO: Flagged for deletion? Old OpMode
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.hardware.DistanceSensor;

@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// TODO: Test for OpenCV, may not pursue further, we'll see what Tensorflow can accomplish
+
 @Autonomous(name="RGB To YCrCb", group="linearOpMode")
 public class RGB_To_YCrCb extends AutonomousPrime2020 {
     Mat redDetect = new Mat();

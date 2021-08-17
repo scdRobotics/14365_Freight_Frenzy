@@ -33,6 +33,8 @@ import com.qualcomm.robotcore.util.Range;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.hardware.rev.RevBlinkinLedDriver;
 
+// TODO: Flagged for deletion? Old velocity test program
+
 //@Disabled
 //Odometry documentation
 //https://docs.wpilib.org/en/stable/docs/software/kinematics-and-odometry/mecanum-drive-odometry.html

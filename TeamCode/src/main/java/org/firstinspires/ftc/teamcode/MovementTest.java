@@ -2,6 +2,8 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
+// TODO: Flagged for deletion? Test Autonomous Code
+
 @Autonomous(name="AutonomousTestCode", group="linearOpMode")
 public class MovementTest extends AutonomousPrime2020 {
     @Override

@@ -10,7 +10,7 @@ import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
 
 import java.util.List;
 
-// TODO: Add distance sensor checks to high goal & two other power shots; eventually, wobble delivery for 4 rings
+// TODO: Flagged for deletion? Old Test Autonomous
 
 @Autonomous(name="--TestAuto--", group="linearOpMode")
 public class UltimateGoalUltimateFast extends AutonomousPrime2020 {

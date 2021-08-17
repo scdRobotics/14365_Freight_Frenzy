@@ -10,6 +10,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 
+// TODO: Migrate into autonomous prime (likely after it is already cleaned up) and working on .json writing of robot events
+
 /**
  * Created by Gabriel on 2018-01-03.
  * A simple way to log data to a file.

@@ -6,7 +6,9 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
 import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
 import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
 import java.util.List;
-// TODO: Add distance sensor checks to high goal & two other power shots; eventually, wobble delivery for 4 rings
+
+// TODO: Flagged for deletion? Old Test Autonomous
+
 @Autonomous(name="COLE", group="linearOpMode")
 public class UltimateColeFast extends AutonomousPrime2020 {
     private static final String TFOD_MODEL_ASSET = "UltimateGoal.tflite";

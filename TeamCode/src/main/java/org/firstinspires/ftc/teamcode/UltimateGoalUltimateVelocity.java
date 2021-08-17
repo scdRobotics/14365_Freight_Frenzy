@@ -11,7 +11,7 @@ import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
 
 import java.util.List;
 
-// TODO: Add distance sensor checks to high goal & two other power shots; eventually, wobble delivery for 4 rings
+// TODO: Clean up, same as Autonomous Prime
 
 @Autonomous(name="-----FRANK-----", group="linearOpMode")
 public class UltimateGoalUltimateVelocity extends AutonomousPrime2020 {
