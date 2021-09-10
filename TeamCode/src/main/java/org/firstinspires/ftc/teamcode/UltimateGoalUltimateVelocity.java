@@ -11,7 +11,7 @@ import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
 
 import java.util.List;
 
-// TODO: Clean up, same as Autonomous Prime
+// TODO: Wait for new season!
 
 @Autonomous(name="-----FRANK-----", group="linearOpMode")
 public class UltimateGoalUltimateVelocity extends AutonomousPrime2020 {

@@ -40,7 +40,7 @@ import com.qualcomm.robotcore.util.Range;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.hardware.rev.RevBlinkinLedDriver;
 
-// TODO: Clean up, add comments, remove anything unnecessary; general housekeeping
+// TODO: Wait for new season!
 
 @Disabled
 @Autonomous(name="AutonomousPrime2020", group="Linear Opmode")

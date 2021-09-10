@@ -13,7 +13,7 @@
 
 package org.firstinspires.ftc.teamcode;
 
-// TODO: Test variation of "LinearTeleOpMain" for getting distance sensor Return to Point working
+// TODO: Test variation of "LinearTeleOpMain" for getting distance sensor Return to Point working (LONG TERM)
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
