@@ -41,6 +41,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.hardware.rev.RevBlinkinLedDriver;
 
 // TODO: Wait for new season!
+// Did I mess up? I don't know how to use Github yet
 
 @Disabled
 @Autonomous(name="AutonomousPrime2020", group="Linear Opmode")
