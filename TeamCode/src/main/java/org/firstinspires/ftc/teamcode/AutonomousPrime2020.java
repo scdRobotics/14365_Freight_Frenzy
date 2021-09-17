@@ -46,7 +46,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.hardware.rev.RevBlinkinLedDriver;
 
 // TODO: Wait for new season!
-// Did I mess up? I don't know how to use Github yet
+// I merged the branch... do I need to push to main for it to show up on remote as opposed to just local??
 
 @Disabled
 @Autonomous(name="AutonomousPrime2020", group="Linear Opmode")
