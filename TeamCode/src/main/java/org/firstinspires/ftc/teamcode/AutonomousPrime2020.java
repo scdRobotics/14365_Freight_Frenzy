@@ -1,4 +1,6 @@
 package org.firstinspires.ftc.teamcode;
+import android.os.Environment;
+
 import com.qualcomm.ftccommon.SoundPlayer;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
@@ -26,6 +28,9 @@ import com.qualcomm.robotcore.hardware.Blinker;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.concurrent.TimeUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.Rotation;
@@ -52,6 +57,14 @@ public class AutonomousPrime2020 extends LinearOpMode {
     *   SETUP   *
     *************
     */
+
+    private static final String BASE_FOLDER_NAME = "FIRST";
+    private Writer fileWriter;
+    private String line = "";
+    private boolean logTime;
+    private long startTime;
+    private boolean disabled = false;
+    ElapsedTime timer = new ElapsedTime(ElapsedTime.Resolution.MILLISECONDS);
 
     protected DcMotorEx frontLeft = null;
     protected DcMotorEx frontRight = null;
@@ -170,6 +183,92 @@ public class AutonomousPrime2020 extends LinearOpMode {
      *   MAIN METHODS   *
      ********************
      */
+
+    /**
+     * Begin logging to file
+     */
+    public void Log(String filename, boolean logTime) {
+        if (logTime) startTime = System.nanoTime();
+        this.logTime = logTime;
+        String directoryPath = Environment.getExternalStorageDirectory().getPath()+"/"+BASE_FOLDER_NAME;
+        File directory = new File(directoryPath);
+        //noinspection ResultOfMethodCallIgnored
+        directory.mkdir();
+        try {
+            fileWriter = new FileWriter(directoryPath+"/"+filename+".csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Stop logging to file
+     */
+    public void close() {
+        try {
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Update file with String line, then newline
+     */
+    public void update() {
+        if (disabled) return;
+        try {
+            if (logTime) {
+                long timeDifference = System.nanoTime()-startTime;
+                line = timeDifference/1E9+","+line;
+            }
+            fileWriter.write(line+"\n");
+            line = "";
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Add data to String line
+     */
+    public void addData(String data) {
+        if (disabled){
+            return;
+        }
+        if (!line.equals("")) {
+            line += ",";
+        }
+        line += data;
+    }
+
+    public void addData(Object data) {
+        addData(data.toString());
+    }
+    public void addData(boolean data) {
+        addData(String.valueOf(data));
+    }
+    public void addData(byte data) {
+        addData(String.valueOf(data));
+    }
+    public void addData(char data) {
+        addData(String.valueOf(data));
+    }
+    public void addData(short data) {
+        addData(String.valueOf(data));
+    }
+    public void addData(int data) {
+        addData(String.valueOf(data));
+    }
+    public void addData(long data) {
+        addData(String.valueOf(data));
+    }
+    public void addData(float data) {
+        addData(String.valueOf(data));
+    }
+    public void addData(double data) {
+        addData(String.valueOf(data));
+    }
 
     /**
      * Spin launch wheels based off of passed Velocity

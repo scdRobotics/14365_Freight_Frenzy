@@ -9,16 +9,58 @@ import com.qualcomm.robotcore.hardware.SwitchableLight;
 public class PositionTest extends AutonomousPrime2020 {
     @Override
     public void runOpMode(){
-        mapObjects();
-        waitForStart();
+        Log("DistanceSensorTest", false); //Make file
 
-        while(opModeIsActive()){
-            updateDist();
-            telemetry.addData("Left Dist: ", readLeftDist);
-            telemetry.addData("Right Dist: ", readRightDist);
-            telemetry.addData("Front Dist: ", readFrontDist);
-            telemetry.addData("Back Dist: ", readBackDist);
+        //addData("LaunchRight Velocity");
+        //addData("LaunchLeft Velocity");
+        //addData("Elapsed Time");
+        //addData("Launch Left Error");
+        addData("Right Sensor Value (Cardboard)");
+        addData("Right Sensor Time");
+        addData("Back Sensor Value (Wall)");
+        addData("Back Sensor Time");
+        update(); //Update File
+        System.out.println("Start Loop");
+        timer.reset(); //Reset timer
+        boolean loop = true;
+        int count = 0;
+        while (opModeIsActive() && loop) { //Loop
+            //addData(launchRight.getVelocity()); //Record launch right motor velocity
+            //System.out.println("In Loop");
+            //telemetry.addData("Y'ello?", "Who dis?");
+            //telemetry.update();
+            //addData(launchLeft.getVelocity()); //Record launch left wheel motor velocity
+            //addData(timer.time()); //Add timer when recording happens
+
+            //addData(1020-launchLeft.getVelocity()); //Add timer when recording happens
+            //addData(1020-launchRight.getVelocity()); //Add timer when recording happens
+
+            updateRightDist();
+            addData(readRightDist);
+            addData(timer.time());
+            timer.reset();
+
+            updateBackDist();
+            addData(readBackDist);
+            addData(timer.time());
+            timer.reset();
+
+            count++;
+            telemetry.addData("Loops Through: ", count);
             telemetry.update();
+
+
+            //addData("\n"); //New line
+            update(); //Update File- might want to update file when is stop requested to save time?? Risky if function fails to complete before stop, though
+
+
+            if (count >= 5000) {
+                update();
+                System.out.println("Loop End");
+                telemetry.update();
+                close();
+                loop = false;
+            }
         }
 
         /*forwardEncoder(130, 1);
