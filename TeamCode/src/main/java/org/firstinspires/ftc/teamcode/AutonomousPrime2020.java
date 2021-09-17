@@ -46,7 +46,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.hardware.rev.RevBlinkinLedDriver;
 
 // TODO: Wait for new season!
-// I merged the branch... do I need to push to main for it to show up on remote as opposed to just local??
+// Deleted branch; does it update?
 
 @Disabled
 @Autonomous(name="AutonomousPrime2020", group="Linear Opmode")
